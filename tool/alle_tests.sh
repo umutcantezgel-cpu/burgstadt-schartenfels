@@ -8,9 +8,6 @@ cd "$ROOT"
 filter() { grep -v -E 'running flutter as root|superuser|Woah|📎|^  /$' || true; }
 step() { echo; echo "== $*"; }
 
-step "Ebene 11 · Bestand: mordakte_core"
-(cd packages/mordakte_core && dart analyze 2>&1 | filter | tail -1 && dart test 2>&1 | filter | tail -1 && dart run bin/validate.dart 2>&1 | filter | grep -E "OK|FEHLER")
-
 for p in pixel_engine burgstadt_core burgstadt_spiel room_host; do
   if [ -d "packages/$p" ]; then
     step "Paket $p: analyze + test"
@@ -21,7 +18,7 @@ for p in pixel_engine burgstadt_core burgstadt_spiel room_host; do
 done
 
 if [ -f packages/burgstadt_core/bin/leitplanken.dart ]; then
-  step "Ebene 10 · Leitplanken (alle Spieltexte: Burgstadt + Klassische Fälle)"
+  step "Ebene 10 · Leitplanken (alle Spieltexte der Burgstadt)"
   (cd packages/burgstadt_core && dart run bin/leitplanken.dart 2>&1 | filter | tail -1)
 fi
 
@@ -84,8 +81,6 @@ step "Flutter analyze (App)"
 flutter analyze 2>&1 | filter | tail -1
 
 if [ "${1:-}" != "schnell" ]; then
-  step "Ebene 11 · Server-Smoke"
-  (cd server && dart pub get >/dev/null 2>&1 && timeout 300 dart run tool/smoke.dart 2>&1 | filter | tail -1)
   step "Ebene 9 · Geräte: Web-Build + Playwright (desktop, handy-quer, handy-hoch)"
   # Build-Cache leeren (E52): Wechselt die Aufrufform (mit/ohne „-o build/web“, z. B. nach
   # tool/pruefen.sh), hält das Flutter-Werkzeug die Asset-Ausgaben sonst für aktuell und schreibt
@@ -104,7 +99,5 @@ if [ "${1:-}" != "schnell" ]; then
   step "Ebene 7 · Leistung (Z-09): AOT, 20 Spielminuten, Faktor 4"
   LEI="$(mktemp -d)"
   (cd packages/burgstadt_spiel && dart compile exe bin/leistung.dart -o "$LEI/leistung" 2>&1 | filter | tail -1 && "$LEI/leistung" 20 2>&1 | filter | tee "$LEI/ergebnis.txt" | grep -E "Nachladespitzen|Spiellogik|Speicher|Budget|LEISTUNG")
-  step "Ebene 11 · Mordakte simulate"
-  (cd packages/mordakte_core && dart run bin/simulate.dart alle 1 2 2>&1 | filter | grep "Σ")
 fi
 echo; echo "ALLE TESTS GRÜN"

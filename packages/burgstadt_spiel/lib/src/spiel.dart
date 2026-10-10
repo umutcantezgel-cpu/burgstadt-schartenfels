@@ -137,7 +137,7 @@ class Spiel {
   /// Tonausgabe (App-Hülle setzt die echte).
   Tonausgabe ton = MerkendeTonausgabe();
 
-  /// Wird bei Aktionen gerufen, die die App-Hülle ausführt: `klassisch`, `beenden`.
+  /// Wird bei Aktionen gerufen, die die App-Hülle ausführt: `beenden`.
   void Function(String aktion)? beiAktion;
 
   double zeit = 0;

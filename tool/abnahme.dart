@@ -66,10 +66,9 @@ Future<void> main(List<String> args) async {
   String? erste(String re, [int gruppe = 0]) => RegExp(re, multiLine: true).firstMatch(l)?.group(gruppe);
 
   // ------------------------------------------------------------------ Z-01 Bestand
-  final bestandSchritte = ['Ebene 11 · Bestand: mordakte_core', 'Ebene 11 · Server-Smoke', 'Ebene 11 · Mordakte simulate'];
-  final fehlend = bestandSchritte.where((s) => !hat(s)).toList();
-  kriterium('Z-01', gruen && fehlend.isEmpty && File('$wurzel/nachtlauf/belege/phase0_ausgangstests.txt').existsSync(),
-      'Gesamtlauf ${gruen ? 'grün' : 'NICHT grün'}; Bestand: Core-Tests, validate, Server-Smoke, simulate${fehlend.isEmpty ? ' gelaufen' : ' fehlt: ${fehlend.join(', ')}'}; Ausgangswerte phase0_ausgangstests.txt');
+  // Seit der Auslagerung aus „Mordakte“ gehören Core-Tests, Server-Smoke und simulate nicht mehr hierher.
+  kriterium('Z-01', gruen && File('$wurzel/nachtlauf/belege/phase0_ausgangstests.txt').existsSync(),
+      'Gesamtlauf ${gruen ? 'grün' : 'NICHT grün'}; Ausgangswerte phase0_ausgangstests.txt');
 
   // ------------------------------------------------------------------ Z-02 Pixel
   final beleg = alle(r'^BELEGFOTOS OK \((\d+) Bilder\)').toList();

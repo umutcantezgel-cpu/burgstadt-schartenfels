@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Stillgelegt seit der Auslagerung aus „werwolf_digital_flutter“: Das Skript pushte und mergte
+# nach Branchnamen des alten Repos. Für dieses Repo neu einrichten, bevor es wieder benutzt wird.
+echo "stillgelegt (Auslagerung aus werwolf_digital_flutter)" >&2; exit 1
 # Commit nur bei grünem Gesamttest (schnell). Aufruf: bash tool/commit_gruen.sh "<Nachricht>"
 set -uo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"

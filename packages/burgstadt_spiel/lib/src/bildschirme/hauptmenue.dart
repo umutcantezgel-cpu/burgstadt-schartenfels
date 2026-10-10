@@ -52,7 +52,6 @@ class Hauptmenue extends Bildschirm {
       besetzung,
       'Im WLAN spielen',
       'Optionen',
-      'Klassische Fälle',
     ];
     final wahl = ui.menue(eintraege, cx, y, breite: breite);
     switch (wahl < 0 ? '' : eintraege[wahl]) {
@@ -77,8 +76,6 @@ class Hauptmenue extends Bildschirm {
         spiel.oeffne(WlanBildschirm());
       case 'Optionen':
         spiel.oeffne(OptionenBildschirm());
-      case 'Klassische Fälle':
-        spiel.beiAktion?.call('klassisch');
       default:
         if (wahl >= 0 && eintraege[wahl] == besetzung) spiel.besetzung = spiel.besetzung >= 20 ? 4 : spiel.besetzung + 2;
     }

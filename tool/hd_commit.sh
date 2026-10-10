@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Stillgelegt seit der Auslagerung aus „werwolf_digital_flutter“: Das Skript pushte und mergte
+# nach Branchnamen des alten Repos. Für dieses Repo neu einrichten, bevor es wieder benutzt wird.
+echo "stillgelegt (Auslagerung aus werwolf_digital_flutter)" >&2; exit 1
 # Burgstadt HD: Commit nur bei grünem Schnelllauf, unveränderten Spieltexten und gleicher
 # Layout-Prüfsumme. Nimmt nur die genannten Pfade auf (kein „git add -A“) und pusht auf den
 # HD-Arbeitsbranch (N-HD-01, E-030).

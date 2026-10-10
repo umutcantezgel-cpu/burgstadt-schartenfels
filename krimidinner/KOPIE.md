@@ -1,0 +1,31 @@
+# Kanon-Kopie (eingefroren)
+
+Die Burgstadt liest den Kanon des Krimidinners „Spuk im Gewölbe“ zur Laufzeit aus `krimidinner/spuk-im-gewoelbe/10_kanon/`. Dieser Ordner und `90_werkzeug/kanon.py` sind eine **eingefrorene Kopie** aus `umutcantezgel-cpu/werwolf_digital_flutter` am Stand `47611d8d87f6a418a8f275ca2cbac96a2e4abe5d`. Das Krimidinner selbst wird dort weitergeführt; Änderungen am Original kommen hier nur bewusst und geprüft an. Anpassungen für die Burgstadt gehören weiter in das Overlay `nachtlauf/kanon/ANPASSUNG.md`.
+
+## Prüfsummen (sha256)
+
+```
+793f039cea8199666604347ee26e126ea347ebb90e21ca00f6dc0514e7e9bf9b  10_kanon/K1-GRUNDWAHRHEIT.md
+822338e2ead18f333d4dd507cb3ed868ecf87f26f45b2511e286db0392554cc8  10_kanon/K2-ROLLEN-05-12.md
+4d6d48e2529b3fc5b6c77891851aba63d100d81a72d135523386029a14aa2b92  10_kanon/K2-ROLLEN-13-20.md
+3db0b9f7809d4cab4f799ed37a291956ae5923d02cd03728fc1d0378092fab45  10_kanon/K2-ROLLEN-KERN.md
+207b6aff281ac19663625301c233cb0bc80965be2b9816c1bc29a3fef6caee78  10_kanon/K3-HINWEISE-KERN.md
+f8bd1ad0cd893e96fd30e0634a5427a1f9c572a7f8e299532dc457c2043cd0ea  10_kanon/K3-HINWEISE-P1.md
+92210045fe5b9518b1631eeb0e598a12b258392b6aac286f952da7e0ce5205e3  10_kanon/K3-HINWEISE-P2.md
+a120faf629585b311183c10e5e9f8252fc4360722c7011b7a0b7eb6ee495028f  10_kanon/K3-HINWEISE-P3.md
+1433d7bb15635734b55482af5d4d0673ea0fe67a39481929be8ddacb59f7e5ba  10_kanon/K3-HINWEISE.md
+fc0744e8ae0729b97a51424a819020fdab90302032e86b66881a3b15b790ef3c  10_kanon/K4-GESPRAECHE-KERN.md
+22757c3116e8f9d0b7b03bcc7cc393e4e7328fbdec9c1a7a982cd1bbd63b6c8b  10_kanon/K4-GESPRAECHE-P1.md
+63eae8ed07fdefdbe3b09cbb394cfc021e7529b6e5a062c936ca5d2cd5762c17  10_kanon/K4-GESPRAECHE-P2.md
+e4ae348f2deddfd28a64aff3f6e8476c7e8b4ed98dcfce3afd7fc0221f79ffbb  10_kanon/K4-GESPRAECHE-P3.md
+c373e31538ea2c04e21dea8203e13d18d14b1f773c002de8f6dcc93664d51bd3  10_kanon/K5-ENTSCHEIDUNGEN-DETEKTIV.md
+e5ef6f973ee4e48f8b90f7546588f5597a98e17db821825a2b442458ef27f7ef  10_kanon/K5-ENTSCHEIDUNGEN-P1.md
+a49d35b5c4b84c9e3c20c12e020fbe113f83e7db219baace661dcf45c2ff616a  10_kanon/K5-ENTSCHEIDUNGEN-P2.md
+b729650c9118145cfa1a6b97db7a519f6e04b24448f992d028b738a10e1a4880  10_kanon/K5-ENTSCHEIDUNGEN-P3.md
+e9d4437fdb2b95e45dccb6d8660ed791e7278fe0785ba9dfc618a1e8879dce1c  10_kanon/K5-MECHANIK.md
+2ad374caa1846d513656491c54c43428e2842c1c9d0b4710c8e8932238c92c7e  10_kanon/K6-AUFLOESUNG.md
+634d6b18aace8eca312ea422ad893f66391835c4efd74383582fc597c03ae588  10_kanon/K7-LUEGENREGEL.md
+bfab361202dd6f14010c6aa85c1cb4eed8f362ed63d9c911a9c90ee4ecf25067  10_kanon/K8-STILBLATT.md
+c74913f9557eba5fb674b5c99cbb8db7b210a55d7bfab57e18dfc1743214c425  10_kanon/K9-LOOKBIBEL.md
+78986729efbd5dc7bda11d52616d061776c5b47b102b1c3fe4d664d525b7121e  90_werkzeug/kanon.py
+```
